@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Complaint Form</h1>
+        <form action="/complaint" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="complaint">Complaint:</label>
+            <input type="text" id="complaint" name="complaint" required>
+            
+            <label for="complaint_details">Details:</label>
+            <textarea id="complaint_details" name="complaint_details" required></textarea>
+            
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Response</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Complaint Response</h1>
+        <div class="chatbox">
+            <div class="messages">
+                {% if response %}
+                    <div class="message bot">
+                        <span class="typewriter">{{ response|nl2br|safe }}</span>
+                    </div>
+                {% endif %}
+            </div>
+            <a href="/feedback">
+                <button type="button">Submit Feedback</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
